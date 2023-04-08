@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cmath>
 
 using namespace std;
@@ -28,9 +28,9 @@ int main()
 	Point b{ 89 };
 	a.GetX();
 	b.GetX();
-	cout << "Äèñòàíèÿ äî òî÷êè A  = "<< a.distance(a) << endl;
-	cout << "Äèñòàíèÿ äî òî÷êè Á  = " << a.distance(b) << endl;
-	cout << "Ðàññòîÿíèå ìåæäó òî÷êàìè = " << distance(a,b) << endl;
+	cout << "Ð”Ð¸ÑÑ‚Ð°Ð½Ð¸Ñ Ð´Ð¾ Ñ‚Ð¾Ñ‡ÐºÐ¸ A  = "<< a.distance(a) << endl;
+	cout << "Ð”Ð¸ÑÑ‚Ð°Ð½Ð¸Ñ Ð´Ð¾ Ñ‚Ð¾Ñ‡ÐºÐ¸ Ð‘  = " << a.distance(b) << endl;
+	cout << "Ð Ð°ÑÑÑ‚Ð¾ÑÐ½Ð¸Ðµ Ð¼ÐµÐ¶Ð´Ñƒ Ñ‚Ð¾Ñ‡ÐºÐ°Ð¼Ð¸ = " << distance(a,b) << endl;
 }
 
 Point::Point()
@@ -44,7 +44,7 @@ Point::Point (double x)
 	x0 = 0;
 	
 }
-void Point::GetX() const {cout <<"Òî÷êà:" << x << endl;}
+void Point::GetX() const {cout <<"Ð¢Ð¾Ñ‡ÐºÐ°:" << x << endl;}
 double Point::SetX(double x) {return this-> x=x;}
 double Point::distance(Point a) {return  a.x - a.x0;}
 
