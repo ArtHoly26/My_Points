@@ -11,7 +11,7 @@ public:
 	Point(double x);
 	void GetX() const;
 	double SetX(double x);
-	double distance(Point a) ;
+	double distance() ;
 	friend double distance(Point a, Point b);
 	
 private:
@@ -19,18 +19,25 @@ private:
 	double x0;
 };
 
-double distance(Point a, Point b);
+double distance(Point x1, Point x2);
 
 int main()
 {
 	setlocale(LC_ALL, "Rus");
 	Point a{ 34 };
 	Point b{ 89 };
+	Point c{ -44 };
+	Point d{ 55 };
 	a.GetX();
 	b.GetX();
-	cout << "Дистания до точки A  = "<< a.distance(a) << endl;
-	cout << "Дистания до точки Б  = " << a.distance(b) << endl;
-	cout << "Расстояние между точками = " << distance(a,b) << endl;
+	c.GetX();
+	d.GetX();
+	cout << "Дистания до точки A  = "<< a.distance() << endl;
+	cout << "Дистания до точки Б  = " << b.distance() << endl;
+	cout << "Дистания до точки C  = " << c.distance() << endl;
+	cout << "Дистания до точки D  = " << d.distance() << endl;
+	cout << "Расстояние между точками = " << distance(c,b) << endl;
+	cout << "Расстояние между точками = " << distance(a,d) << endl;
 }
 
 Point::Point()
@@ -46,7 +53,7 @@ Point::Point (double x)
 }
 void Point::GetX() const {cout <<"Точка:" << x << endl;}
 double Point::SetX(double x) {return this-> x=x;}
-double Point::distance(Point a) {return  a.x - a.x0;}
+double Point::distance() {return  x - x0;}
 
-double distance(Point a, Point b) {return abs(a.x - b.x);}
+double distance(Point x1, Point x2) {return abs(x1.x - x2.x);}
 
