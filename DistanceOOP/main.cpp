@@ -12,7 +12,7 @@ public:
 	void GetX() const;
 	double SetX(double x);
 	double distance() ;
-	friend double distance(Point a, Point b);
+	friend double distance(Point x1, Point x2);
 	
 private:
 	double x;
