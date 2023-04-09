@@ -25,7 +25,7 @@ private:
 	double y0;
 };
 
-double distance(Point x1, Point x2);
+double distance(Point xy1, Point xy2);
 
 int main()
 {
