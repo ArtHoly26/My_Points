@@ -34,6 +34,7 @@ int main()
 	Point b {15,18};
 	Point c {25,10};
 	Point d {21,15};
+	a.SetXY(11, 26);
 	a.GetPoint();
 	b.GetPoint();
 	c.GetPoint();
@@ -87,8 +88,7 @@ double Point::SetY(double y)
 }
 double Point::SetXY(double x, double y)
 {
-	return this->x = x;
-	       this->y = y;
+	return this->x = x,this->y = y;
 }
 
 double Point::distance() 
