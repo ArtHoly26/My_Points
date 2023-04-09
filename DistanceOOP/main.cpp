@@ -97,6 +97,6 @@ double Point::distance()
 }
 double distance(Point xy1, Point xy2) 
 { 
-	return sqrt(pow(xy2.x - xy1.x, 2) + pow(xy2.y - xy2.y,2)); 
+	return sqrt(pow(xy2.x - xy1.x, 2) + pow(xy2.y - xy1.y, 2)); 
 }
 
