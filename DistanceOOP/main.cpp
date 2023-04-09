@@ -47,56 +47,40 @@ int main()
 	cout << "Расстояние между точками = " << distance(a,d) << endl;
 }
 
-Point::Point ()
-{
-  x = 0;
-  y = 0;
-  x0 = 0;
-  y0 = 0;
+Point::Point (){
+	x = y = x0 = y0 = 0;
 }
-Point::Point (double x, double y)
-{
+Point::Point (double x, double y){
 	this->x = x;
 	this->y = y;
-	x0 = 0;
-	y0 = 0;
+	x0 = y0 = 0;
 }
 
-void Point::GetX() const 
-{
-	cout <<"Точка:" << x << endl;
+void Point::GetX() const {
+	cout <<"X : " << x << endl;
 }
-void Point::GetY() const
-{
-	cout << "Точка:" << y << endl;
+void Point::GetY() const{
+	cout << "Y : " << y << endl;
 }
-void Point::GetPoint() const
-{
+void Point::GetPoint() const{
 	cout << "X : " << x << "\t";
 	cout << "Y : " << y << endl;
 }
 
-double Point::SetX(double x) 
-{
-
+double Point::SetX(double x) {
 	return this-> x=x;
 }
-double Point::SetY(double y)
-{
-
+double Point::SetY(double y){
 	return this->y = y;
 }
-double Point::SetXY(double x, double y)
-{
+double Point::SetXY(double x, double y){
 	return this->x = x,this->y = y;
 }
 
-double Point::distance() 
-{
+double Point::distance() {
 	return  sqrt(pow(x - x0, 2) + pow(y - y0, 2));
 }
-double distance(Point xy1, Point xy2) 
-{ 
+double distance(Point xy1, Point xy2) { 
 	return sqrt(pow(xy2.x - xy1.x, 2) + pow(xy2.y - xy1.y, 2)); 
 }
 
