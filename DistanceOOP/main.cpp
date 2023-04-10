@@ -21,8 +21,6 @@ public:
 private:
 	double x;
 	double y;
-	double x0;
-	double y0;
 };
 
 double distance(Point xy1, Point xy2);
@@ -48,12 +46,11 @@ int main()
 }
 
 Point::Point (){
-	x = y = x0 = y0 = 0;
+	x = y = 0;
 }
 Point::Point (double x, double y){
 	this->x = x;
 	this->y = y;
-	x0 = y0 = 0;
 }
 
 void Point::GetX() const {
@@ -78,7 +75,7 @@ double Point::SetXY(double x, double y){
 }
 
 double Point::distance() {
-	return  sqrt(pow(x - x0, 2) + pow(y - y0, 2));
+	return  sqrt(pow(x, 2) + pow(y, 2));
 }
 double distance(Point xy1, Point xy2) { 
 	return sqrt(pow(xy2.x - xy1.x, 2) + pow(xy2.y - xy1.y, 2)); 
